@@ -1,9 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+
+import { WaveBottom } from "../components/wave-bottom"
+
 import "../index.css"
 
 const Body = styled.div`
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   background-image: url("wave.svg");
   background-repeat: no-repeat;
   @media screen and (max-width: 768px) {
@@ -12,10 +17,17 @@ const Body = styled.div`
   }
 `
 
-const Intro = styled.div`
-  font-family: "Rubik";
+const Section = styled.section`
+  padding: 50px;
   font-size: 4rem;
+`
+
+const Intro = styled(Section)`
+  font-family: "Rubik";
   color: #273036;
+`
+
+const Text = styled.div`
   margin-top: 10rem;
   margin-left: 10rem;
   @media screen and (max-width: 768px) {
@@ -23,6 +35,26 @@ const Intro = styled.div`
     margin-top: 5rem;
     margin-left: 0;
   }
+`
+
+const Content = styled.section`
+  color: #fcffff;
+  font-family: "Roboto";
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+`
+
+const ContentContainer = styled.div`
+  background-color: #273036;
+  padding: 50px;
+  font-size: 3rem;
+  font-weight: bold
+  flex: 1;
+`
+
+const ContentText = styled(Text)`
+  margin-top: 0;
 `
 
 const Focus = styled.h2`
@@ -66,19 +98,29 @@ export default () => (
   <>
     <Body>
       <Intro>
-        <Group1Transition>
-          <Focus>Hello! 👋</Focus>
-        </Group1Transition>
-        <Group2Transition>
-          My name is <br />
-          <Name>Anthony Powell</Name>
-          <br />
-        </Group2Transition>
-        <Group3Transition>
-          but most people call me
-          <br /> <Name>Tony</Name>
-        </Group3Transition>
+        <Text>
+          <Group1Transition>
+            <Focus>Hello! 👋</Focus>
+          </Group1Transition>
+          <Group2Transition>
+            My name is <br />
+            <Name>Anthony Powell</Name>
+            <br />
+          </Group2Transition>
+          <Group3Transition>
+            but most people call me
+            <br /> <Name>Tony</Name>
+          </Group3Transition>
+        </Text>
       </Intro>
+      <Content>
+        <WaveBottom />
+        <ContentContainer>
+          <ContentText>
+            I build web applications for internet companies
+          </ContentText>
+        </ContentContainer>
+      </Content>
     </Body>
   </>
 )
