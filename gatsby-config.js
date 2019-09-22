@@ -10,4 +10,19 @@ module.exports = {
     siteUrl: `https://www.anthonypowell.me/`,
     description: `Anthony Powell's Portfolio`,
   },
+  plugins: [
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Rubik`,
+          },
+          {
+            family: `Open Sans`,
+          },
+        ],
+      },
+    },
+  ],
 }
