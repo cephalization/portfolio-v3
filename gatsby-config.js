@@ -5,5 +5,9 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Anthony Powell | Portfolio`,
+    siteUrl: `https://www.anthonypowell.me/`,
+    description: `Anthony Powell's Portfolio`,
+  },
 }
