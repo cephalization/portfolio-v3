@@ -40,9 +40,7 @@ const Text = styled.div`
 const Content = styled.section`
   color: #fcffff;
   font-family: "Roboto";
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
+  width: 100vw;
 `
 
 const ContentContainer = styled.div`

@@ -2,8 +2,7 @@ import React from "react"
 
 export const WaveBottom = props => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
+    preserveAspectRatio="none"
     viewBox="0 0 1440 320"
     style={{ display: "block" }}
     {...props}
