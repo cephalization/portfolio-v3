@@ -23,7 +23,12 @@ export default () => (
       <Intro>
         <Text>
           <Group1Transition>
-            <Focus>Hello! 👋</Focus>
+            <Focus>
+              Hello!{" "}
+              <span role="img" aria-label="wave hello">
+                👋
+              </span>
+            </Focus>
           </Group1Transition>
           <Group2Transition>
             My name is <br />
