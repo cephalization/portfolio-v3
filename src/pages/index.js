@@ -14,7 +14,7 @@ import {
   Name,
   Text,
 } from "../components/styled"
-import { JOBS } from "../jobs"
+import { Jobs } from "../components/jobs"
 
 import "../index.css"
 
@@ -49,6 +49,7 @@ export default () => (
             I build web applications for internet companies
           </ContentText>
         </ContentContainer>
+        <Jobs />
       </Content>
     </Body>
   </>

@@ -40,10 +40,11 @@ export const Content = styled.section`
 
 export const ContentContainer = styled.div`
   background-color: #273036;
-  padding: 50px;
+  padding: 25px 50px;
   font-size: 3rem;
   font-weight: bold
   flex: 1;
+  height: 15rem;
 `
 
 export const ContentText = styled(Text)`
