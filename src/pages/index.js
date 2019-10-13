@@ -14,6 +14,7 @@ import {
   Name,
   Text,
 } from "../components/styled"
+import { JOBS } from "../jobs"
 
 import "../index.css"
 
