@@ -1,5 +1,7 @@
 import moment from "moment"
 
+import { pluralize } from "./pluralize"
+
 export const lengthOfTime = job => {
   const startTime = moment(job.start, "MM YY")
   const endTime = job.end === "current" ? moment() : moment(job.end, "MM YY")

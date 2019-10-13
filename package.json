@@ -10,7 +10,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop -- -H 0.0.0.0",
     "serve": "gatsby serve",
-    "test": "jest src/**/*.test.js"
+    "test": "jest src/**/*.test.js --watch"
   },
   "dependencies": {
     "gatsby": "^2.15.20",
