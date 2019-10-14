@@ -11,6 +11,9 @@ const Card = styled.div`
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
     0 2px 5px 0 rgba(14, 30, 37, 0.56);
   border-radius: 8px;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `
 
 export const Job = ({ job }) => (

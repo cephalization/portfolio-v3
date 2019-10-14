@@ -45,6 +45,9 @@ export const ContentContainer = styled.div`
   font-weight: bold
   flex: 1;
   height: 15rem;
+  @media screen and (max-width: 768px) {
+    height: 20rem;
+  }
 `
 
 export const ContentText = styled(Text)`

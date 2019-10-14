@@ -17,7 +17,11 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    margin-top: -4rem;
+    margin-top: -10rem;
+  }
+
+  @media screen and (max-width: 520px) {
+    margin-top: -5rem;
   }
 `
 
@@ -46,7 +50,7 @@ const getNumberOfDefaultCards = width => {
     return 3
   }
 
-  return 2
+  return 1
 }
 
 export const Jobs = () => {
