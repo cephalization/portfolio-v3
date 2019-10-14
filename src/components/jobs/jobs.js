@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
 import { Job } from "../../components/job"
@@ -51,10 +51,13 @@ const getNumberOfDefaultCards = width => {
 
 export const Jobs = () => {
   const [showMore, setShowMore] = useState(false)
+  const [defaultCards, setDefaultCards] = useState(2)
 
   const toggleShowMore = () => setShowMore(show => !show)
 
-  const defaultCards = getNumberOfDefaultCards(window.innerWidth)
+  useEffect(() => {
+    setDefaultCards(getNumberOfDefaultCards(window.innerWidth))
+  }, [])
 
   return (
     <Container>
