@@ -8,10 +8,16 @@ import { JOBS } from "../../jobs"
 const Container = styled.div`
   margin-top: -11rem;
   margin-left: 12rem;
+  margin-right: 10rem;
   margin-bottom: 2rem;
-  @media screen and (max-width: 768px) {
-    font-size: 2.5rem
+  @media screen and (max-width: 1280px) {
     margin-left: 2rem;
+    margin-right: 2rem
+    margin-top: -6rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: -4rem;
   }
 `
 
@@ -31,15 +37,29 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button``
 
+const getNumberOfDefaultCards = width => {
+  if (width > 1900) {
+    return 4
+  }
+
+  if (width > 768) {
+    return 3
+  }
+
+  return 2
+}
+
 export const Jobs = () => {
   const [showMore, setShowMore] = useState(false)
 
   const toggleShowMore = () => setShowMore(show => !show)
 
+  const defaultCards = getNumberOfDefaultCards(window.innerWidth)
+
   return (
     <Container>
       <JobContainer>
-        {JOBS.slice(0, showMore ? JOBS.length : 3).map(job => (
+        {JOBS.slice(0, showMore ? JOBS.length : defaultCards).map(job => (
           <Job key={`${job.company}__${job.position}`} job={job} />
         ))}
       </JobContainer>

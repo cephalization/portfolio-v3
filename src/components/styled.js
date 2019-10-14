@@ -25,7 +25,7 @@ export const Intro = styled(Section)`
 export const Text = styled.div`
   margin-top: 10rem;
   margin-left: 10rem;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1280px) {
     font-size: 2.5rem
     margin-top: 5rem;
     margin-left: 0;
