@@ -26,23 +26,23 @@ export const Text = styled.div`
   margin-top: 10rem;
   margin-left: 10rem;
   @media screen and (max-width: 1280px) {
-    font-size: 2.5rem
+    font-size: 2.5rem;
     margin-top: 5rem;
     margin-left: 0;
   }
 `
 
 export const Content = styled.section`
+  background-color: #273036;
   color: #fcffff;
   font-family: "Roboto";
   width: 100vw;
 `
 
 export const ContentContainer = styled.div`
-  background-color: #273036;
   padding: 25px 50px;
   font-size: 3rem;
-  font-weight: bold
+  font-weight: bold;
   flex: 1;
   height: 15rem;
   @media screen and (max-width: 768px) {
@@ -56,7 +56,7 @@ export const ContentText = styled(Text)`
 
 export const Focus = styled.h2`
   display: inline-block;
-  margin: .4rem 0
+  margin: 0.4rem 0;
   font-style: italic;
   font-size: 5rem;
   @media screen and (max-width: 768px) {

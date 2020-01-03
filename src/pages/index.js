@@ -42,8 +42,10 @@ export default () => (
           </Group3Transition>
         </Text>
       </Intro>
-      <Content>
+      <span>
         <WaveBottom />
+      </span>
+      <Content>
         <ContentContainer>
           <ContentText>
             I build web applications for internet companies
