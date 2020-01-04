@@ -40,7 +40,6 @@ export const Content = styled.section`
 `
 
 export const ContentContainer = styled.div`
-  padding: 25px 50px;
   font-size: 3rem;
   font-weight: bold;
   flex: 1;

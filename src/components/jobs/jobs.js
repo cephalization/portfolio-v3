@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import { Job } from "../../components/job"
@@ -38,29 +38,13 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button``
 
-const getNumberOfDefaultCards = width => {
-  if (width > 1900) {
-    return 4
-  }
-
-  if (width > 768) {
-    return 3
-  }
-
-  return 1
-}
+const DEFAULT_CARDS = 2
 
 export const Jobs = () => {
   const [showMore, setShowMore] = useState(false)
-  const [defaultCards, setDefaultCards] = useState(2)
-
   const toggleShowMore = () => setShowMore(show => !show)
 
-  useEffect(() => {
-    setDefaultCards(getNumberOfDefaultCards(window.innerWidth))
-  }, [])
-
-  const initJobs = JOBS.slice(0, showMore ? JOBS.length : defaultCards)
+  const initJobs = JOBS.slice(0, showMore ? JOBS.length : DEFAULT_CARDS)
 
   return (
     <Container>
