@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
+
 import { lengthOfTime } from "../../utils/length-of-time"
 
 const JobSection = styled.div``
@@ -56,7 +57,6 @@ const Duration = styled.p`
 
 const Company = styled.p`
   font-family: "Roboto";
-  opacity: 0.8;
   font-size: 1.2rem;
   letter-spacing: 0.02em;
 `
@@ -66,19 +66,61 @@ const Description = styled.pre`
   font-size: 1rem;
   opacity: 0.9;
   white-space: pre-wrap;
+  margin-bottom: 0;
 `
 
-export const Job = ({ job, prevJob = {} }) => (
-  <JobSection>
-    {prevJob.company !== job.company && <Company>{job.company}</Company>}
-    <JobContent>
-      <InnerContent>
-        <Headline>
-          <Position>{job.position}</Position>
-          <Duration>{lengthOfTime(job)}</Duration>
-        </Headline>
-        <Description>{job.description && job.description.trim()}</Description>
-      </InnerContent>
-    </JobContent>
-  </JobSection>
-)
+const Details = styled(Description)`
+  margin: auto 0;
+`
+
+const ShowDetails = styled.button`
+  margin-top: 1rem;
+  width: fit-content;
+  display: flex;
+  justify-self: right;
+  justify-content: center;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: none;
+  border: 1px solid #273036;
+  font-weight: 500;
+  font-family: "Roboto";
+  letter-spacing: 0.01rem;
+  cursor: pointer;
+  &:hover {
+    background: #273036;
+    color: white;
+  }
+`
+
+export const Job = ({ job, prevJob = {} }) => {
+  const [showDetails, toggleShowDetails] = useState(window.innerWidth >= 1024)
+  return (
+    <JobSection>
+      {prevJob.company !== job.company && <Company>{job.company}</Company>}
+      <JobContent>
+        <InnerContent>
+          <Headline>
+            <Position>{job.position}</Position>
+            <Duration>{lengthOfTime(job)}</Duration>
+          </Headline>
+          {job.description && (
+            <Description>
+              {job.description && job.description.trim()}
+            </Description>
+          )}
+          {showDetails ? (
+            <Details>{job.details}</Details>
+          ) : (
+            <ShowDetails type="button" onClick={() => toggleShowDetails(true)}>
+              More details
+            </ShowDetails>
+          )}
+        </InnerContent>
+      </JobContent>
+    </JobSection>
+  )
+}
