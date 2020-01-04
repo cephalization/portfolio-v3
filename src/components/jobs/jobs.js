@@ -5,39 +5,15 @@ import { Job } from "../../components/job"
 
 import { JOBS } from "../../jobs"
 
-const Container = styled.div`
-  margin-top: -11rem;
-  margin-left: 12rem;
-  margin-right: 10rem;
-  margin-bottom: 2rem;
-  @media screen and (max-width: 1280px) {
-    margin-left: 2rem;
-    margin-right: 2rem
-    margin-top: -6rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    margin-top: -10rem;
-  }
-
-  @media screen and (max-width: 520px) {
-    margin-top: -5rem;
-  }
-`
+const Container = styled.div``
 
 const JobContainer = styled.div`
-  margin: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 0.9%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 `
 
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-right: 50px;
-`
+const ButtonContainer = styled.div``
 
 const Button = styled.button``
 

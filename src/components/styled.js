@@ -44,10 +44,7 @@ export const ContentContainer = styled.div`
   font-size: 3rem;
   font-weight: bold;
   flex: 1;
-  height: 15rem;
-  @media screen and (max-width: 768px) {
-    height: 20rem;
-  }
+  margin-bottom: 2rem;
 `
 
 export const ContentText = styled(Text)`
