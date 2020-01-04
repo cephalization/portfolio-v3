@@ -12,7 +12,7 @@ const Container = styled.div`
   margin-bottom: 2rem;
   @media screen and (max-width: 1280px) {
     margin-left: 2rem;
-    margin-right: 2rem
+    margin-right: 2rem;
     margin-top: -6rem;
   }
 
@@ -27,9 +27,6 @@ const Container = styled.div`
 
 const JobContainer = styled.div`
   margin: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 0.9%;
 `
 
 const ButtonContainer = styled.div`
@@ -63,11 +60,17 @@ export const Jobs = () => {
     setDefaultCards(getNumberOfDefaultCards(window.innerWidth))
   }, [])
 
+  const initJobs = JOBS.slice(0, showMore ? JOBS.length : defaultCards)
+
   return (
     <Container>
       <JobContainer>
-        {JOBS.slice(0, showMore ? JOBS.length : defaultCards).map(job => (
-          <Job key={`${job.company}__${job.position}`} job={job} />
+        {initJobs.map((job, i) => (
+          <Job
+            key={`${job.company}__${job.position}`}
+            job={job}
+            prevJob={initJobs[i - 1]}
+          />
         ))}
       </JobContainer>
 
