@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
 import { Button } from "../styled"
@@ -75,7 +75,13 @@ const Details = styled(Description)`
 `
 
 export const Job = ({ job, prevJob = {} }) => {
-  const [showDetails, toggleShowDetails] = useState(window.innerWidth >= 1024)
+  const [showDetails, toggleShowDetails] = useState(false)
+  useEffect(() => {
+    if (window.innerWidth >= 1024) {
+      toggleShowDetails(true)
+    }
+  }, [])
+
   return (
     <JobSection>
       {prevJob.company !== job.company && <Company>{job.company}</Company>}
