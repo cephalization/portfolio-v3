@@ -22,7 +22,6 @@ const InnerContent = styled.div`
   display: grid;
   grid-template-rows: repeat(minmax(auto-fit, 1fr));
   animation: 0.75s cubic-bezier(0.075, 0.82, 0.165, 1) slidein;
-  margin: 1rem;
   padding: 1rem;
   background-color: white;
   color: #273036;
@@ -30,6 +29,12 @@ const InnerContent = styled.div`
     0 2px 5px 0 rgba(14, 30, 37, 0.56);
   border-radius: 8px;
   margin-left: 2rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 0;
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
 `
 
 const Headline = styled.div``
@@ -37,8 +42,9 @@ const Headline = styled.div``
 const Position = styled.p`
   font-family: "Rubik";
   letter-spacing: 0.03em;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.2rem;
+  color: #273036;
 `
 
 const Duration = styled.p`
