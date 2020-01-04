@@ -28,7 +28,7 @@ export const Text = styled.div`
   @media screen and (max-width: 1280px) {
     font-size: 2.5rem;
     margin-top: 5rem;
-    margin-left: 0;
+    margin-left: 1rem;
   }
 `
 
