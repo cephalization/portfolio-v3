@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
+import { Button } from "../styled"
 import { Job } from "../../components/job"
-
 import { JOBS } from "../../jobs"
 
 const Container = styled.div`
@@ -29,16 +29,15 @@ const JobContainer = styled.div`
   margin: 1rem 0;
 `
 
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-right: 50px;
-`
-
-const Button = styled.button``
-
 const DEFAULT_CARDS = 2
+
+const ShowMore = styled(Button)`
+  background: white;
+  border: 1px solid #4c80b0;
+  &:hover {
+    background: #4c80b0;
+  }
+`
 
 export const Jobs = () => {
   const [showMore, setShowMore] = useState(false)
@@ -58,11 +57,7 @@ export const Jobs = () => {
         ))}
       </JobContainer>
 
-      {!showMore && (
-        <ButtonContainer>
-          <Button onClick={toggleShowMore}>Show more</Button>
-        </ButtonContainer>
-      )}
+      {!showMore && <ShowMore onClick={toggleShowMore}>Show more</ShowMore>}
     </Container>
   )
 }

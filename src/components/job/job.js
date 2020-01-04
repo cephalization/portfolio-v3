@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
+import { Button } from "../styled"
 import { lengthOfTime } from "../../utils/length-of-time"
 
 const JobSection = styled.div``
@@ -73,29 +74,6 @@ const Details = styled(Description)`
   margin: auto 0;
 `
 
-const ShowDetails = styled.button`
-  margin-top: 1rem;
-  width: fit-content;
-  display: flex;
-  justify-self: right;
-  justify-content: center;
-  border-radius: 0.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background: none;
-  border: 1px solid #273036;
-  font-weight: 500;
-  font-family: "Roboto";
-  letter-spacing: 0.01rem;
-  cursor: pointer;
-  &:hover {
-    background: #273036;
-    color: white;
-  }
-`
-
 export const Job = ({ job, prevJob = {} }) => {
   const [showDetails, toggleShowDetails] = useState(window.innerWidth >= 1024)
   return (
@@ -115,9 +93,9 @@ export const Job = ({ job, prevJob = {} }) => {
           {showDetails ? (
             <Details>{job.details}</Details>
           ) : (
-            <ShowDetails type="button" onClick={() => toggleShowDetails(true)}>
+            <Button type="button" onClick={() => toggleShowDetails(true)}>
               More details
-            </ShowDetails>
+            </Button>
           )}
         </InnerContent>
       </JobContent>
