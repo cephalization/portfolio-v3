@@ -1,8 +1,6 @@
 import styled from "styled-components"
 
 export const Body = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   background-image: url("wave.svg");
   background-repeat: no-repeat;
@@ -13,8 +11,9 @@ export const Body = styled.div`
 `
 
 export const Section = styled.section`
-  padding: 50px;
   font-size: 4rem;
+  padding: 10vh 10vw;
+  padding-bottom: 0;
 `
 
 export const Intro = styled(Section)`
@@ -23,20 +22,17 @@ export const Intro = styled(Section)`
 `
 
 export const Text = styled.div`
-  margin-top: 10rem;
-  margin-left: 10rem;
   @media screen and (max-width: 1280px) {
     font-size: 2.5rem;
-    margin-top: 5rem;
-    margin-left: 1rem;
   }
 `
 
-export const Content = styled.section`
+export const Content = styled(Section)`
+  padding-top: 0;
   background-color: #273036;
   color: #fcffff;
   font-family: "Roboto";
-  width: 100vw;
+  padding-bottom: 1rem;
 `
 
 export const ContentContainer = styled.div`

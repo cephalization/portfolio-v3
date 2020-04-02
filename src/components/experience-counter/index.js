@@ -3,7 +3,11 @@ import styled from "styled-components"
 import { JOBS } from "../../jobs"
 import moment from "moment"
 
-const StyledText = styled.p``
+const StyledText = styled.p`
+  font-size: 2.5rem;
+  margin-top: 4rem;
+  padding-left: 4rem;
+`
 
 const StyledTime = styled.span`
   color: #4c80b0;

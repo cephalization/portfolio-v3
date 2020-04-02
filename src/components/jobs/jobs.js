@@ -5,21 +5,7 @@ import { Button } from "../styled"
 import { Job } from "../../components/job"
 import { JOBS } from "../../jobs"
 
-const Container = styled.div`
-  margin-left: 12rem;
-  margin-right: 10rem;
-  margin-bottom: 2rem;
-  @media screen and (max-width: 1280px) {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  @media screen and (max-width: 768px) {
-  }
-
-  @media screen and (max-width: 520px) {
-  }
-`
+const Container = styled.div``
 
 const JobContainer = styled.div`
   margin: 1rem 0;

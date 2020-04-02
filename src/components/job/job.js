@@ -37,6 +37,7 @@ const InnerContent = styled.div`
   @media screen and (max-width: 768px) {
     margin: 0;
   }
+  width: 100%;
 `
 
 const Headline = styled.div``
