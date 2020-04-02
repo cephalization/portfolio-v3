@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import Github from "../icons/github.svg"
-import Twitter from "../icons/Twitter.svg"
+import Twitter from "../icons/twitter.svg"
 import LinkedIn from "../icons/linkedin.svg"
 
 const Container = styled.div`
