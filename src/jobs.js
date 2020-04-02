@@ -4,7 +4,7 @@ export const JOBS = [
     start: "2 20",
     end: "current",
     position: "Frontend Software Engineer",
-    description: `Translate high-fidelity figma mockups into functional views and features, while collaborating regularly through video calls and pair programming.`,
+    description: `Translating high-fidelity figma mockups into functional views and features, while collaborating regularly through video calls and pair programming.`,
     details: [
       `Modern ES2020+ Javascript (Ecmascript), React.js, Redux, custom component library, frontend development`,
       `Golang back-end API and services code reviews`,

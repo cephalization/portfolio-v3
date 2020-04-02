@@ -2,59 +2,65 @@ import React from "react"
 
 import { WaveBottom } from "../components/wave-bottom"
 import {
-  Body,
   Content,
-  ContentContainer,
-  ContentText,
   Focus,
   Group1Transition,
   Group2Transition,
   Group3Transition,
-  Intro,
   Name,
-  Text,
+  Section,
+  Global,
 } from "../components/styled"
 import { Jobs } from "../components/jobs"
+import { Socials } from "../components/socials"
 import { ExperienceCounter } from "../components/experience-counter"
 
 import "../index.css"
 
 export default () => (
   <>
-    <Body>
-      <Intro>
-        <Text>
-          <Group1Transition>
-            <Focus>
-              Hello!{" "}
-              <span role="img" aria-label="wave hello">
-                👋
-              </span>
-            </Focus>
-          </Group1Transition>
-          <Group2Transition>
-            My name is <br />
-            <Name>Anthony Powell</Name>
-            <br />
-          </Group2Transition>
-          <Group3Transition>
-            but most people call me
-            <br /> <Name>Tony</Name>
-          </Group3Transition>
-        </Text>
-      </Intro>
-      <span>
-        <WaveBottom />
-      </span>
-      <Content>
-        <ContentContainer>
-          <ContentText>
-            I've been building web applications professionally for:{" "}
-            <ExperienceCounter />
-          </ContentText>
-        </ContentContainer>
-        <Jobs />
-      </Content>
-    </Body>
+    <Content>
+      <Group1Transition>
+        <Section>
+          <Focus>
+            Hello!{" "}
+            <span role="img" aria-label="wave hello">
+              👋
+            </span>
+          </Focus>
+          <br />
+          My name is <Name>Anthony Powell</Name>,
+          <br />
+          but most people call me <Name>Tony</Name>.
+        </Section>
+      </Group1Transition>
+      <Group2Transition>
+        <Section>
+          I build web applications for internet companies and
+          <br />
+          I've been doing it professionally for around <ExperienceCounter />
+        </Section>
+      </Group2Transition>
+      <Group3Transition>
+        <Section>
+          Here are my experiences
+          <br />
+          <br />
+          <br />
+          <Jobs />
+        </Section>
+      </Group3Transition>
+      <Group3Transition>
+        <Section>
+          You can check out my projects and other interests at these links
+          <br />
+          <br />
+          <br />
+          <Socials />
+        </Section>
+      </Group3Transition>
+    </Content>
+    <WaveBottom />
+    <Global />
   </>
 )

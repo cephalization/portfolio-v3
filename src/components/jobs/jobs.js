@@ -7,18 +7,17 @@ import { JOBS } from "../../jobs"
 
 const Container = styled.div``
 
-const JobContainer = styled.div`
-  margin: 4rem 0;
-`
+const JobContainer = styled.div``
 
 const DEFAULT_CARDS = 2
 
 const ShowMore = styled(Button)`
-  background: white;
-  border: 1px solid #4c80b0;
+  background-color: white;
+  border: 1px solid #273036;
   &:hover {
-    background: #4c80b0;
+    background-color: #273036;
   }
+  transition: all 0.3s ease;
 `
 
 export const Jobs = () => {

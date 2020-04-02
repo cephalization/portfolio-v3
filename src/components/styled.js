@@ -1,60 +1,65 @@
-import styled from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 
-export const Body = styled.div`
-  height: 100vh;
-  background-image: url("wave.svg");
-  background-repeat: no-repeat;
-  @media screen and (max-width: 768px) {
-    background-position-x: 45%;
-    background-size: 200%;
+export const Global = createGlobalStyle`
+  body {
+    height: 100vh;
+    background-image: url("wave.svg");
+    background-repeat: no-repeat;
+    @media screen and (max-width: 768px) {
+      background-position-x: 45%;
+      background-size: 200%;
+    }
+    color: #273036;
+    font-family: "Rubik";
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
   }
 `
 
+export const Body = styled.div``
+
 export const Section = styled.section`
-  font-size: 4rem;
-  padding: 10vh 10vw;
-  padding-bottom: 0;
+  padding: 1rem;
 `
 
 export const Intro = styled(Section)`
-  font-family: "Rubik";
+  padding-top: 4rem;
   color: #273036;
 `
 
 export const Text = styled.div`
   @media screen and (max-width: 1280px) {
-    font-size: 2.5rem;
   }
 `
 
 export const Content = styled(Section)`
-  padding-top: 0;
-  background-color: #273036;
-  color: #fcffff;
-  font-family: "Roboto";
-  padding-bottom: 1rem;
+  padding: 10vh 10vw;
+  padding-bottom: 1vh;
+  flex: 1;
+  @media screen and (max-width: 768px) {
+    padding-left: 1rem;
+  }
 `
 
-export const ContentContainer = styled.div`
-  font-size: 2.5rem;
+export const ContentOffset = styled.span`
+  margin-top: -2rem;
+  z-index: 0;
 `
 
-export const ContentText = styled(Text)`
-  margin-top: 0;
-`
+export const ContentContainer = styled.div``
+
+export const ContentText = styled(Text)``
 
 export const Focus = styled.h2`
   display: inline-block;
-  margin: 0.4rem 0;
+  margin: 0.2rem 0;
   font-style: italic;
-  font-size: 5rem;
-  @media screen and (max-width: 768px) {
-    font-size: 3.5rem;
-  }
 `
 
 export const Name = styled(Focus)`
   color: #4c80b0;
+  font-size: 2rem;
 `
 
 export const FadeIn = styled.div`

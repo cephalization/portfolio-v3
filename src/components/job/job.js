@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
-import { Button } from "../styled"
+import { Button, Focus } from "../styled"
 import { lengthOfTime } from "../../utils/length-of-time"
 
-const JobSection = styled.div``
+const JobSection = styled.div`
+  font-size: 1.3rem;
+`
 
 const JobContent = styled.div`
-  border-left: 1px solid white;
+  border-left: 2px solid #273036;
   padding: 1rem;
 `
 
@@ -27,9 +29,7 @@ const InnerContent = styled.div`
   padding: 1rem;
   background-color: white;
   color: #273036;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
-    0 2px 5px 0 rgba(14, 30, 37, 0.56);
-  border-radius: 8px;
+  border-radius: 4px;
   margin-left: 2rem;
   margin-bottom: 0;
   margin-top: 0;
@@ -45,27 +45,29 @@ const Headline = styled.div``
 const Position = styled.p`
   font-family: "Rubik";
   letter-spacing: 0.03em;
-  font-size: 1.4rem;
   margin-bottom: 0.2rem;
   color: #273036;
 `
 
 const Duration = styled.p`
   font-family: "Roboto";
-  opacity: 0.8;
-  font-size: 1rem;
+  opacity: 0.6;
   margin-top: 0;
 `
 
-const Company = styled.p`
+const Company = styled(Focus)`
+  padding: 1rem;
   font-family: "Roboto";
-  font-size: 2rem;
   letter-spacing: 0.02em;
+  line-height: 1.8rem;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #273036;
+  margin: 0;
 `
 
 const Description = styled.pre`
   font-family: "Rubik";
-  font-size: 1.2rem;
   opacity: 0.9;
   white-space: pre-wrap;
   margin-bottom: 0;
@@ -73,10 +75,10 @@ const Description = styled.pre`
 
 const Details = styled.ul`
   font-family: "Rubik";
-  font-size: 1.2rem;
-  opacity: 0.9;
+  opacity: 0.8;
   margin-bottom: 0;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
 `
 
 export const Job = ({ job, prevJob = {} }) => {

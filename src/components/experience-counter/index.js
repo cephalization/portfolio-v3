@@ -3,14 +3,15 @@ import styled from "styled-components"
 import { JOBS } from "../../jobs"
 import moment from "moment"
 
-const StyledText = styled.p`
-  font-size: 2.5rem;
-  margin-top: 4rem;
-  padding-left: 4rem;
-`
+const StyledText = styled.p``
 
 const StyledTime = styled.span`
   color: #4c80b0;
+  min-width: 9rem;
+  display: inline-block;
+  @media screen and (max-width: 768px) {
+    min-width: 8rem;
+  }
 `
 
 const getMyExperience = startDate => {
@@ -47,7 +48,8 @@ export const ExperienceCounter = () => {
       <br />
       <StyledTime>{counter.days}</StyledTime> days,
       <br />
-      and
+      <StyledTime />
+      {" and"}
       <br />
       <StyledTime>{counter.seconds}</StyledTime> seconds.
     </StyledText>
