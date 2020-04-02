@@ -44,7 +44,7 @@ const Headline = styled.div``
 const Position = styled.p`
   font-family: "Rubik";
   letter-spacing: 0.03em;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 0.2rem;
   color: #273036;
 `
@@ -52,26 +52,30 @@ const Position = styled.p`
 const Duration = styled.p`
   font-family: "Roboto";
   opacity: 0.8;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-top: 0;
 `
 
 const Company = styled.p`
   font-family: "Roboto";
-  font-size: 1.2rem;
+  font-size: 2rem;
   letter-spacing: 0.02em;
 `
 
 const Description = styled.pre`
   font-family: "Rubik";
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0.9;
   white-space: pre-wrap;
   margin-bottom: 0;
 `
 
-const Details = styled(Description)`
-  margin: auto 0;
+const Details = styled.ul`
+  font-family: "Rubik";
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
 `
 
 export const Job = ({ job, prevJob = {} }) => {
@@ -97,7 +101,11 @@ export const Job = ({ job, prevJob = {} }) => {
             </Description>
           )}
           {showDetails ? (
-            <Details>{job.details}</Details>
+            <Details>
+              {job.details.map(detail => (
+                <li>{detail}</li>
+              ))}
+            </Details>
           ) : (
             <Button type="button" onClick={() => toggleShowDetails(true)}>
               More details

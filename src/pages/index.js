@@ -15,6 +15,7 @@ import {
   Text,
 } from "../components/styled"
 import { Jobs } from "../components/jobs"
+import { ExperienceCounter } from "../components/experience-counter"
 
 import "../index.css"
 
@@ -48,7 +49,8 @@ export default () => (
       <Content>
         <ContentContainer>
           <ContentText>
-            I build web applications for internet companies
+            I've been building web applications professionally for:{" "}
+            <ExperienceCounter />
           </ContentText>
         </ContentContainer>
         <Jobs />

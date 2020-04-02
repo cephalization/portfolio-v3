@@ -6,22 +6,18 @@ import { Job } from "../../components/job"
 import { JOBS } from "../../jobs"
 
 const Container = styled.div`
-  margin-top: -11rem;
   margin-left: 12rem;
   margin-right: 10rem;
   margin-bottom: 2rem;
   @media screen and (max-width: 1280px) {
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: -6rem;
   }
 
   @media screen and (max-width: 768px) {
-    margin-top: -10rem;
   }
 
   @media screen and (max-width: 520px) {
-    margin-top: -5rem;
   }
 `
 
