@@ -43,8 +43,12 @@ export const ExperienceCounter = () => {
 
   return (
     <StyledText>
-      <StyledTime>{counter.years}</StyledTime> years,{" "}
-      <StyledTime>{counter.days}</StyledTime> days, and{" "}
+      <StyledTime>{counter.years}</StyledTime> years,
+      <br />
+      <StyledTime>{counter.days}</StyledTime> days,
+      <br />
+      and
+      <br />
       <StyledTime>{counter.seconds}</StyledTime> seconds.
     </StyledText>
   )

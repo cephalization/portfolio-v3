@@ -8,7 +8,7 @@ import { JOBS } from "../../jobs"
 const Container = styled.div``
 
 const JobContainer = styled.div`
-  margin: 1rem 0;
+  margin: 4rem 0;
 `
 
 const DEFAULT_CARDS = 2

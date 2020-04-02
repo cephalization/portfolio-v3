@@ -36,13 +36,7 @@ export const Content = styled(Section)`
 `
 
 export const ContentContainer = styled.div`
-  font-size: 3rem;
-  font-weight: bold;
-  flex: 1;
-  height: 15rem;
-  @media screen and (max-width: 768px) {
-    height: 20rem;
-  }
+  font-size: 2.5rem;
 `
 
 export const ContentText = styled(Text)`

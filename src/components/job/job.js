@@ -103,8 +103,9 @@ export const Job = ({ job, prevJob = {} }) => {
           )}
           {showDetails ? (
             <Details>
-              {job.details.map(detail => (
-                <li>{detail}</li>
+              {job.details.map((detail, idx) => (
+                // safe to use index as key since collection is static
+                <li key={idx}>{detail}</li>
               ))}
             </Details>
           ) : (
