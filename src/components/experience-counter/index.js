@@ -20,7 +20,9 @@ const getMyExperience = startDate => {
 
   const years = now.diff(start, "years")
   const days = now.diff(start, "days") - years * 365
-  const seconds = now.diff(start, "seconds") - days * 86400
+  const seconds = now.diff(moment().startOf("day"), "seconds")
+
+  console.log(seconds)
 
   return {
     years,
