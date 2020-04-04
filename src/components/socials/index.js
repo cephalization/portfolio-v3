@@ -15,34 +15,20 @@ const Container = styled.div`
   }
 `
 
-const Icon = styled.span`
+const Icon = styled.a`
   height: 3rem;
   width: 3rem;
   margin: 1rem 3rem;
-  border-radius: 8px;
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   @media screen and (max-width: 768px) {
     margin: 1rem;
-    padding: 0;
-  }
-
-  :hover {
-    * {
-      fill: white;
-    }
-    background-color: #273036;
   }
 `
 
 export const Socials = () => (
   <Container>
-    <Icon>
-      <a href="https://github.com/cephalization">
-        <Github />
-      </a>
+    <Icon href="https://github.com/cephalization">
+      <Github />
     </Icon>
     <Icon href="https://twitter.com/Cephalization">
       <Twitter />
