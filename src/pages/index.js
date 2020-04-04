@@ -43,7 +43,7 @@ export default () => (
       </Group2Transition>
       <Group3Transition>
         <Section>
-          Here are my experiences
+          Here are my recent experiences
           <br />
           <br />
           <br />
