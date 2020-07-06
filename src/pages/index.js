@@ -16,9 +16,13 @@ import { Socials } from "../components/socials"
 import { ExperienceCounter } from "../components/experience-counter"
 
 import "../index.css"
+import { Helmet } from "react-helmet"
 
 export default () => (
   <>
+    <Helmet>
+      <title>Anthony Powell | Portfolio</title>
+    </Helmet>
     <Content>
       <Group1Transition>
         <Section>

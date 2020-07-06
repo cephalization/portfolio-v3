@@ -11,6 +11,7 @@ module.exports = {
     description: `Anthony Powell's Portfolio`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
