@@ -1,8 +1,16 @@
 export const JOBS = [
   {
+    company: "Censys",
+    start: "12 20",
+    end: "current",
+    position: "Software Engineer",
+    description: `Building internet things`,
+    details: [],
+  },
+  {
     company: "Hatch",
     start: "2 20",
-    end: "current",
+    end: "12 20",
     position: "Frontend Software Engineer",
     description: `Translating high-fidelity figma mockups into functional views and features, while collaborating regularly through video calls and pair programming.`,
     details: [
