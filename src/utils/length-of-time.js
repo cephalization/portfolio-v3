@@ -12,6 +12,8 @@ export const lengthOfTime = job => {
   const yearPart = `${years} ${pluralize("year", years)}`
   const monthPart = months > 0 ? ` ${months} ${pluralize("month", months)}` : ""
 
+  if (!diff) return "Just started!"
+
   const lengthOfTime =
     diff >= 12
       ? `${yearPart}${monthPart}`

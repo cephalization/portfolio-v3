@@ -4,7 +4,7 @@ export const JOBS = [
     start: "12 20",
     end: "current",
     position: "Software Engineer",
-    description: `Building internet things`,
+    description: `Helping build the richest map of the entire internet.`,
     details: [],
   },
   {

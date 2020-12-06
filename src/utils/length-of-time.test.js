@@ -10,7 +10,7 @@ describe("Length of Time util", () => {
       { test: { start: "11 10", end: "12 10" }, result: "1 month" },
       { test: { start: "12 10", end: "1 11" }, result: "1 month" },
       { test: { start: "11 10", end: "1 11" }, result: "2 months" },
-      { test: { start: "1 10", end: "1 10" }, result: "0 month" }, // edge case
+      { test: { start: "1 10", end: "1 10" }, result: "Just started!" }, // edge case
     ]
 
     tests.forEach(({ test, result }) => expect(lengthOfTime(test)).toBe(result))

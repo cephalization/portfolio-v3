@@ -13,16 +13,18 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Rubik`,
-          },
-          {
-            family: `Roboto`,
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Rubik`,
+            },
+            {
+              family: `Roboto`,
+            },
+          ],
+        },
       },
     },
     {
