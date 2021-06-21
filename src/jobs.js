@@ -3,9 +3,13 @@ export const JOBS = [
     company: "Censys",
     start: "12 20",
     end: "current",
-    position: "Software Engineer",
-    description: `Helping build the richest map of the entire internet.`,
-    details: [],
+    position: "Software Engineer II",
+    description: `Building tools to defend sprawling internet infrastructure.`,
+    details: [
+      `Mentoring engineers in frontend development through pair programming, knowledge sharing, and running a frontend technology guild`.
+      `Writing and refactoring modern React.js, JavaScript, and Node.js code to develop fullstack web application features`,
+      `Writing, sizing, and planning completion of work with product development and design teams`
+    ],
   },
   {
     company: "Hatch",
