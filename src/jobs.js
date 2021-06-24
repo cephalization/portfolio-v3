@@ -8,7 +8,7 @@ export const JOBS = [
     details: [
       `Mentoring engineers in frontend development through pair programming, knowledge sharing, and running a frontend technology guild`.
       `Writing and refactoring modern React.js, JavaScript, and Node.js code to develop fullstack web application features`,
-      `Writing, sizing, and planning completion of work with product development and design teams`
+      `Writing, sizing, and planning completion of work with product development and design teams`,
     ],
   },
   {
