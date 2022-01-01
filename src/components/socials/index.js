@@ -27,13 +27,13 @@ const Icon = styled.a`
 
 export const Socials = () => (
   <Container>
-    <Icon href="https://github.com/cephalization">
+    <Icon about="GitHub Portfolio Link" href="https://github.com/cephalization">
       <Github />
     </Icon>
-    <Icon href="https://twitter.com/Cephalization">
+    <Icon about="Twitter Account Link" href="https://twitter.com/Cephalization">
       <Twitter />
     </Icon>
-    <Icon href="https://linkedin.com/in/anthony-powell-05788696/">
+    <Icon about="LinkedIn Portfolio Link" href="https://linkedin.com/in/anthony-powell-05788696/">
       <LinkedIn />
     </Icon>
   </Container>
